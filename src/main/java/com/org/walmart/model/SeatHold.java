@@ -2,27 +2,23 @@ package com.org.walmart.model;
 
 import java.util.List;
 import java.util.Set;
-import java.util.logging.Logger;
-
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * 
- * @author poorna
+ * Pojo bean class for Seat
+ * @author Poorna
  *
  */
 @XmlRootElement
 public class SeatHold {
-
-	static Logger log = Logger.getLogger(SeatHold.class.getName());
 
 	private String holdId;
 	private String userName;
 	private double price;
 	private String emailId;
 	private	Integer seats;
-	private Set<Integer> seatIds;
+	private Set seatIds;
 	
 	/**
 	 * default empty constructor
@@ -31,9 +27,8 @@ public class SeatHold {
 
 	}
 
-	
 	public SeatHold(String holdId, String userName, double price,
-			String emailId, Integer seats, Set<Integer> seatIds) {
+			String emailId, Integer seats, Set seatIds) {
 		super();
 		this.holdId = holdId;
 		this.userName = userName;
@@ -43,14 +38,6 @@ public class SeatHold {
 		this.seatIds = seatIds;
 	}
 
-
-	public static Logger getLog() {
-		return log;
-	}
-
-	public static void setLog(Logger log) {
-		SeatHold.log = log;
-	}
 
 	public String getHoldId() {
 		return holdId;
@@ -92,11 +79,11 @@ public class SeatHold {
 		this.seats = seats;
 	}
 
-	public Set<Integer> getSeatIds() {
+	public Set getSeatIds() {
 		return seatIds;
 	}
 
-	public void setSeatIds(Set<Integer> seatIds) {
+	public void setSeatIds(Set seatIds) {
 		this.seatIds = seatIds;
 	}
 	

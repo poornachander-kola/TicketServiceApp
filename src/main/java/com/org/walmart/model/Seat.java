@@ -7,36 +7,26 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * Pojo for ticket level
- * 
- * @author jon
+ * Pojo bean class for Seat
+ * @author Poorna
  *
  */
-@XmlRootElement
 public class Seat {
 
-	private int rowId;
-	private int colomnId;
 	private int seatId;
 	private String status;
 	private String reserveId;
 	private String holdId;
 
-	
-	public int getRowId() {
-		return rowId;
-	}
+	private  Seat() {
 
-	public void setRowId(int rowId) {
-		this.rowId = rowId;
 	}
-
-	public int getColomnId() {
-		return colomnId;
-	}
-
-	public void setColomnId(int colomnId) {
-		this.colomnId = colomnId;
+	public Seat(int seatId, String status, String reserveId, String holdId) {
+		super();
+		this.seatId = seatId;
+		this.status = status;
+		this.reserveId = reserveId;
+		this.holdId = holdId;
 	}
 
 	public String getStatus() {

@@ -26,5 +26,5 @@ public SeatHold findAndHoldSeats(int numSeats, String customerEmail);
 seat hold is assigned
 * @return a reservation confirmation code
 */
-public String reserveSeats(int seatHoldId, String customerEmail);
+public String reserveSeats(String seatHoldId, String customerEmail);
 }
